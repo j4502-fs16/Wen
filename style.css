@@ -1,69 +1,107 @@
-p{
-  color: red;
-  color: #666666;
-  font-family: Helvetica, Arial, sans-serif;
+*{
+  margin:0;
+  }
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-image: url("backgroundlake.jpg");
+  background-color: #a8a8a8;
+  background-position: 0;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+#navhead {
+  width: 80%;
+  height: auto;
+  padding: 0;
+  margin: auto;
+}
+
+#navfoot {
+  width: 80%;
+  height: auto;
+  padding: 0;
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: rgba(35, 35, 35, 1);
+  position: fixed;
+  bottom: 0;
+}
+
+#navhead li {
+  width: 25%;
+  font-weight: normal;
+}
+
+#navfoot li{
+  width: 25%;
+  font-size: 0.8em;
   font-style: italic;
 }
 
-h1{
-  font-family: Georgia, "Times New Roman", serif;
+.nav {
+  padding: 0;
+  margin: auto;
 }
 
-body{
-  background-color: #ebe3ce;
+.nav li {
+  background-color: rgba(35, 35, 35, 1);
+  list-style-type: none;
+  float: left;
+  text-align: center;
+  padding: 0;
+  width: 25%;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.nav a:link, a:visited {
+  display:block;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: rgba(35, 35, 35, 1);
+  padding: 4px;
+}
+
+.nav a:hover, a:active{
+  background-color: #d02c30;
 }
 
 #container{
-  width: 95%;
-  background-color: #ffffff;
-  margin: 0 auto;
-  align-content: center;
+  width: 80%;
+  height:100%;
+  background-color: rgba(255, 255, 255, .7);
+  margin: auto;
 }
 
-.joke{
-  color: black;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 0.8em;
-  font-style: italic;
-  margin-top: 0;
-  text-align: right;
+table{
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10%;
 }
 
-#nav {
-  padding: 0;
-}
-
-
-#nav li {
-  float: left;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 25%;
-}
-
-#nav a:link, a:visited {
-  display: block;
-  color: #ffffff;
-  background-color: #98bf21;
-  text-align: center;
-  font-weight: lighter;
-  text-decoration: none;
-  padding: 4px;
+h1{
   font-family: helvetica, Arial, sans-serif;
+  font-size: 3.6em;
+  font-weight: bold;
 }
 
-#nav a:hover, a:active{
-  background-color: #7a991a
+a:hover, a:active img{
+  opacity: 0.6;
+  background-color: transparent;
 }
 
-#footer {
-  color: black;
-  font-family: georgia, "Times New Roman", serif;
-  border-top: 1px solid black;
-  font-size: 0.8em;
+.contact {
+  font-size: 0.7em;
+  font-family: Georgia, "Times New Roman", serif;
 }
 
-img {
-  border-style: none;
+.motto {
+  font-size: 1em;
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: lighter;
 }
