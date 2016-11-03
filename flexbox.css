@@ -1,6 +1,6 @@
 *{
-  margin:0;
-  }
+  margin: 0;
+}
 
 body {
   background-color: #fff5f7;
@@ -27,41 +27,43 @@ body {
   background-color: #171717;
   padding: 10px;
   color: #fff5f7;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .headnavigation a:hover, a:active{
   background-color: #fc5474;
 }
 
-.footnavigation {
-  background: #171717;
-  margin: 0;
+.footnavigation{
+  background: #fff5f7;
+  margin: auto;
+  margin-top: 30px;
   padding: 0;
+  width: 70%;
   list-style: none;
   display: flex;
   flex-flow: column;
 }
 
-.footnavigation li {
+.footnavigation li{
   font-weight: normal;
   font-style: italic;
   font-size: 0.8em;
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
 }
 
-.footnavigation a{
-  text-decoration:none;
+.footnavigation a {
+  text-decoration: none;
   display: block;
   text-align: center;
-  background-color: #171717;
+  background-color: #fff5f7;
   padding: 10px;
-  color: #fff5f7;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  color: #171717;
+  border-bottom: 1px solid #171717;
 }
 
 .footnavigation a:hover, a:active{
   background-color: #fc5474;
+  color: #fff5f7;
 }
 
 h1{
@@ -77,9 +79,10 @@ a:hover, a:active img{
 }
 
 .contact {
-  font-size: 1em;
+  font-size: 0.8em;
   font-family: 'David Libre', Georgia, 'Times New Roman', serif;
   color: #012530;
+  padding: 10px;
 }
 
 .motto {
@@ -91,60 +94,158 @@ a:hover, a:active img{
   color: #012530;
 }
 
-.wrapper{
-  display: flex;
-  flex-flow: column;
+.ac-container {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+
+.main h2 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 2em;
+  color: #012530;
+}
+
+.main h3 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.5em;
+  color: #012530;
+}
+
+.main h4 {
+  font-family: 'David Libre', Georgia, 'Times New Roman', serif;
+  color: #012530;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.main p{
+  font-family: 'David Libre', Georgia, 'Times New Roman', serif;
+  color: #012530;
+  font-size: 1.2em;
 }
 
 .main{
-  display: flex;
-  flex-flow: column;
-  text-align: center;
+  line-height: 180%;
+  width: 70%;
   margin: auto;
+  padding-top: 50px;
+  padding-bottom: 30px;
 }
 
-.contact {
+.main img, h2, h3, h4, p{
   padding: 10px;
 }
 
-@media (min-width: 800px) {
+.main img{
+  display: none;
+}
 
-  .wrapper{
-    display: flex;
-    flex-flow: row wrap;
-    align-items: stretch;
-    justify-content: space-around;
-    margin: auto;
-  }
+.ac-container{
+  margin-top: 40px;
+}
+
+.ac-container label{
+  display: block;
+  cursor: pointer;
+  border: 1px solid #171717;
+}
+
+.ac-container input{
+  display: none;
+}
+
+.ac-container article{
+  overflow: hidden;
+  height: 0px;
+  transition:
+    height 0.3s ease-in-out,
+    box-shadow 0.6s linear;
+}
+
+.ac-container input:checked ~ article{
+  transition:
+    height 0.5s ease-in-out,
+    box-shadow 0.1s linear;
+    box-shadow: 0px 0px 0px 1px rgba(155,155,155,0.3);
+}
+
+.ac-container input:checked ~ article {
+  height: 240px;
+}
+
+.wrapper{
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+}
+
+.header{
+  flex: auto;
+  order: 1;
+}
+
+.sidebar{
+  flex: auto;
+  order: 2;
+}
+
+.main{
+  flex: auto;
+  order: 3;
+}
+
+.footnavigation {
+  display: none;
+}
+
+@media (min-width: 600px) {
 
   .headnavigation{
-    flex: 1 100%;
     flex-flow: row;
     justify-content: flex-end;
   }
 
+  .main img{
+    display:block;
+  }
+}
+
+@media (min-width: 1000px) {
+
   .footnavigation{
-    flex: 1;
-    order: 1;
+    display: flex;
+    flex-flow: column;
   }
 
-  .footnavigation li{
-    padding: 20px;
+  .wrapper{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
   }
 
-  .main{
+  .headnavigation{
+    flex: 1 100%;
+  }
+
+  .main {
     flex: 2;
+    order: 1;
+    max-width: 1000px;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  .sidebar{
+    flex: 1;
     order: 2;
   }
 
-.contact{
-  width: 30%;
-  min-width: 300px;
-  margin: auto;
-  text-align: left;
-}
-  .contact img{
-    float: left;
-    vertical-align: middle;
+  .ac-container{
+    overflow: hidden;
   }
+
 }
