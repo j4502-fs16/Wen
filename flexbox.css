@@ -152,6 +152,10 @@ a:hover, a:active img{
   border: 1px solid #171717;
 }
 
+.ac-container label:hover{
+  background-color: #fc5474;
+}
+
 .ac-container input{
   display: none;
 }
