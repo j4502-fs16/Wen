@@ -232,6 +232,21 @@ nav a:hover, a:active{
   flex-flow: column;
 }
 
+.map-wrapper{
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+.map-wrapper iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+
+}
+
 @media (min-width: 600px) {
 
   .menutrigger{
